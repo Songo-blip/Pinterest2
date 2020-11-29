@@ -45,9 +45,7 @@ namespace Pinterestclone.ViewModel
         {
             if (selectedAdvert != null)
             {
-                var viewModel = DetailsViewModel;
-
-                { SelectedAdvert = selectedAdvert; Adverts = adverts; Position = adverts.IndexOf(selectedAdvert); };
+                var viewModel = new DetailsViewModel { SelectedAdvert = selectedAdvert, Adverts = adverts, Position = adverts.IndexOf(selectedAdvert) };
                 var detailsPage = new DetailsPage { BindingContext = viewModel };
 
                 var navigation = Application.Current.MainPage as NavigationPage;
