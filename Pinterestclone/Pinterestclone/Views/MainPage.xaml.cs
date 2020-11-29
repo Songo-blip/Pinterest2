@@ -5,16 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-namespace Pinterestclone
+namespace Pinterestclone.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
+       
+        }
 
-            BindingContext = new Advert();
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }

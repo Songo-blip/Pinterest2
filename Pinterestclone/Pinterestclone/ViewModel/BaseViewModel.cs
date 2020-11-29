@@ -5,17 +5,17 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
-using Landing;
 
-namespace Pinterestclone
+
+namespace Pinterestclone.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
-
     {
-        public event PropertyChangeEventHandler PropertyChanged;
-        public void onPropertyChange([CallerMemberName]string name = "")
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged([CallerMemberName] string name = "")
         {
-            PropertyChanged?.Invoke(this, new (PropertyChangedEventArgsname)); 
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

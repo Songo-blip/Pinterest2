@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Landing;
-using Base;
+using System.Collections.ObjectModel;
+using Pinterestclone.Model;
+using Xamarin.Forms;
+using System.Windows.Input;
 
-
-namespace Pinterestclone
+namespace Pinterestclone.ViewModel
 {
-    public class AdvertDetails : Base
+    public class DetailsViewModel : BaseViewModel
     { 
   
         ObservableCollection<Advert> adverts;
         public ObservableCollection<Advert> Adverts
-    {
+     {
         get { return adverts; }
         set
         {
@@ -20,15 +21,15 @@ namespace Pinterestclone
             OnPropertyChanged();
         }
 
-    }
+     }
          private Advert selectedAdvert;
-            public Advert selectedAdvert
+            public Advert SelectedAdvert
              {
                  get { return selectedAdvert; }
                 set
             {
             selectedAdvert = value;
-            onPropertyChanged();
+            OnPropertyChanged();
             }
         }
 
@@ -42,16 +43,15 @@ namespace Pinterestclone
 
                 return position;
             }
+            set
             {
-                Set
-                    {
-                    position = Value;
+                    position = value;
                     selectedAdvert = adverts[position];
 
-                    onPropertyChanged();
-                    onPropertyChanged(nameof(selectedAdvert));
-                }
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(SelectedAdvert));
             }
+           
         }
 
     }

@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 using System.Text;
-using System.Windows.Input;   
+using System.Windows.Input;
+using Pinterestclone.Model;
+using DocumentFormat.OpenXml.Drawing;
 
 namespace Pinterestclone.ViewModel
 {
-    public class LandingViewModel : Base
+    public class LandingViewModel : BaseViewModel
     {
         public LandingViewModel()
         {
@@ -28,43 +30,43 @@ namespace Pinterestclone.ViewModel
 
         }
         private Advert selectedAdvert;
-        public Advert selectedAdvert
+        public Advert SelectedAdvert
         {
             get { return selectedAdvert; }
             set
             {
                 selectedAdvert = value;
-                onPropertyChanged();
+                OnPropertyChanged();
             }
         }
         public ICommand SelectionCommand => new Command(DisplayAdvert);
 
-     private void DisplayAdvert()
+        public void DisplayAdvert()
         {
-            if (selectedAdvert !=null)
+            if (selectedAdvert != null)
             {
-                var Base = AdvertDetails { selectedAdvert=selectedAdvert, Adverts =adverts, Position =adverts.IndexOf(selectedAdvert) };
-                var detailsPage = new DetailsPage { BindingContext = Base };
+                var viewModel = DetailsViewModel;
+
+                { SelectedAdvert = selectedAdvert; Adverts = adverts; Position = adverts.IndexOf(selectedAdvert); };
+                var detailsPage = new DetailsPage { BindingContext = viewModel };
 
                 var navigation = Application.Current.MainPage as NavigationPage;
                 navigation.PushAsync(detailsPage, true);
             }
         }
-
-
          private ObservableCollection<Advert> GetAdverts()
-       {
+         {
             return new ObservableCollection<Advert>
-             {
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Book.png" };
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Cabinet.png" };
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Cabinet2.png" };
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Medicine.png" };
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Recipe.png" };
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Table.png" };
+            {
+            new Advert { Name = "Book", Description = "A book about dogs", Image = "Book.png" },
+            new Advert { Name = "Book", Description = "A book about dogs", Image = "Cabinet.png" },
+            new Advert { Name = "Book", Description = "A book about dogs", Image = "Cabinet2.png" },
+            new Advert { Name = "Book", Description = "A book about dogs", Image = "Medicine.png" },
+            new Advert { Name = "Book", Description = "A book about dogs", Image = "Recipe.png" },
+            new Advert { Name = "Book", Description = "A book about dogs", Image = "Table.png" },
+
+            };
 
          }
-
-        }
     }  
 }
