@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pinterestclone.DetailsPage">
+    
+    <Grid Padding="30" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid  Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="0" HorizontalOptions="End" VerticalOptions="Start">
+                <Label Text="Pinterest" TextColor="White" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
+            </StackLayout>
+        </Grid>
+        <Grid>
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand">
+                <Grid RowSpacing="50" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <CarouselView Grid.Row="1" ItemsSource="{Binding Adverts}" HeightRequest="260" HorizontalOptions="FillAndExpand"
+                                  CurrentItem="{Binding SelectedAdvert}" IsScrollAnimated="True" IsSwipeEnabled="True">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Name}" TextColor="White" FontSize="105" FontFamily="ThemeFont" HorizontalOptions="Center"/>
+                                    <Image Source="{Binding Image}" Aspect="Fill" HeightRequest="210" WidthRequest="235" HorizontalOptions="Center" VerticalOptions="End"/>
+                                </Grid>
+                              </DataTemplate>
+                       </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <StackLayout Grid.Row="2" Spacing="20" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding SelectedAdvert.Name}" TextColor="Azure" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
+                        <BoxView BackgroundColor="Azure" HeightRequest="2" WidthRequest="45" VerticalOptions="Start" HorizontalOptions="End"/>
+                        <Label Text="{Binding SelectedAdvert.Description}" TextColor="White" WidthRequest="250" FontFamily="LightFont" FontSize="12" HorizontalOptions="End" HorizontalTextAlignment="End"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </Grid>
+
+    </Grid>
+</ContentPage>
