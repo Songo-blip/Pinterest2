@@ -10,7 +10,7 @@
         </Grid.RowDefinitions>
         <Grid  Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Spacing="0" HorizontalOptions="End" VerticalOptions="Start">
-                <SearchBar Placeholder="Search" />
+                <Label Text="Pinterest" TextColor="White" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
             </StackLayout>
         </Grid>
         <Grid>

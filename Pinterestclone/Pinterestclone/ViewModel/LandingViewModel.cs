@@ -57,11 +57,11 @@ namespace Pinterestclone.ViewModel
             return new ObservableCollection<Advert>
             {
             new Advert { Name = "Book", Description = "A book about dogs", Image = "Book.png" },
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Cabinet.png" },
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Cabinet2.png" },
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Medicine.png" },
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Recipe.png" },
-            new Advert { Name = "Book", Description = "A book about dogs", Image = "Table.png" },
+            new Advert { Name = "Cabinet", Description = "Customised Cabinets", Image = "Cabinet.png" },
+            new Advert { Name = "Cabinet", Description = "For all your cabinet needs", Image = "Cabinet2.png" },
+            new Advert { Name = "Keep Health", Description = "Keep a health lifestyle", Image = "Medicine.png" },
+            new Advert { Name = "Food hecks", Description = "Recipes on the go", Image = "Recipe.png" },
+            new Advert { Name = "Used Tables", Description = "Vintage tables", Image = "Table.png" },
 
             };
 
