@@ -20,7 +20,7 @@
                 <Label Text="Pinterest" TextColor="Red" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
             </StackLayout>
         </Grid>
-        <CollectionView x:Name="advertList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Adverts}" SelectionMode="Single" SelectedItem="{Binding selectedAdvert}" VerticalScrollBarVisibility="Never" SelectionChangedCommand="{Binding SelectionCommand}">
+        <CollectionView x:Name="advertList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Adverts}" SelectionMode="Single" SelectedItem="{Binding SelectedAdvert}" VerticalScrollBarVisibility="Never" SelectionChangedCommand="{Binding SelectionCommand}">
         <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="20" Span="2"/>
             </CollectionView.ItemsLayout>

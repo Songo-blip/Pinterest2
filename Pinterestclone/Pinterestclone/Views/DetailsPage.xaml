@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pinterestclone.DetailsPage">
     
-    <Grid Padding="30" Background="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <Grid Padding="30" Background="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid  Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Spacing="0" HorizontalOptions="End" VerticalOptions="Start">
-                <Label Text="Pinterest" TextColor="White" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
+                <SearchBar Placeholder="Search" />
             </StackLayout>
         </Grid>
         <Grid>

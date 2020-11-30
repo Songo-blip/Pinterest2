@@ -7,19 +7,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Pinterestclone.Views
+namespace Pinterestclone
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailsPage : ContentPage
+
     {
         public DetailsPage()
         {
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
+
     }
+
 }
