@@ -21,7 +21,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <CarouselView Grid.Row="1" ItemsSource="{Binding Adverts}" HeightRequest="260" HorizontalOptions="FillAndExpand"
+                    <CarouselView Grid.Row="1" ItemsSource="{Binding Adverts}" HeightRequest="300" HorizontalOptions="FillAndExpand"
                                   CurrentItem="{Binding SelectedAdvert}" IsScrollAnimated="True" IsSwipeEnabled="True">
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
@@ -32,7 +32,7 @@
                               </DataTemplate>
                        </CarouselView.ItemTemplate>
                     </CarouselView>
-                    <StackLayout Grid.Row="2" Spacing="15" HorizontalOptions="FillAndExpand">
+                    <StackLayout Grid.Row="2" Spacing="10" HorizontalOptions="FillAndExpand">
                         <Label Text="{Binding SelectedAdvert.Name}" TextColor="Azure" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
                         <BoxView BackgroundColor="Azure" HeightRequest="2" WidthRequest="45" VerticalOptions="Start" HorizontalOptions="End"/>
                         <Label Text="{Binding SelectedAdvert.Description}" TextColor="White" WidthRequest="250" FontFamily="LightFont" FontSize="12" HorizontalOptions="End" HorizontalTextAlignment="End"/>

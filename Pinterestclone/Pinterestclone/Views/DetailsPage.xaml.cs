@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Pinterestclone
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailsPage : ContentPage
 
     {
