@@ -10,7 +10,7 @@
         </Grid.RowDefinitions>
         <Grid  Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Spacing="0" HorizontalOptions="End" VerticalOptions="Start">
-                <Label Text="Pinterest" TextColor="White" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
+                <Label Text="Pinterest" TextColor="Red" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
             </StackLayout>
         </Grid>
         <Grid>
@@ -27,12 +27,12 @@
                             <DataTemplate>
                                 <Grid HorizontalOptions="FillAndExpand">
                                     <Label Text="{Binding Name}" TextColor="White" FontSize="105" FontFamily="ThemeFont" HorizontalOptions="Center"/>
-                                    <Image Source="{Binding Image}" Aspect="Fill" HeightRequest="210" WidthRequest="235" HorizontalOptions="Center" VerticalOptions="End"/>
+                                    <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="300" WidthRequest="235" HorizontalOptions="Center" VerticalOptions="End"/>
                                 </Grid>
                               </DataTemplate>
                        </CarouselView.ItemTemplate>
                     </CarouselView>
-                    <StackLayout Grid.Row="2" Spacing="20" HorizontalOptions="FillAndExpand">
+                    <StackLayout Grid.Row="2" Spacing="15" HorizontalOptions="FillAndExpand">
                         <Label Text="{Binding SelectedAdvert.Name}" TextColor="Azure" FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>
                         <BoxView BackgroundColor="Azure" HeightRequest="2" WidthRequest="45" VerticalOptions="Start" HorizontalOptions="End"/>
                         <Label Text="{Binding SelectedAdvert.Description}" TextColor="White" WidthRequest="250" FontFamily="LightFont" FontSize="12" HorizontalOptions="End" HorizontalTextAlignment="End"/>

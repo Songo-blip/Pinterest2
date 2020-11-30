@@ -12,6 +12,8 @@
         <StackLayout>
             <SearchBar Placeholder="search" />
         </StackLayout>
+        <pancake:PancakeView>
+        <ScrollView>
     <Grid Padding="30" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,13 +30,15 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Image Aspect="AspectFill" Source="{Binding Image}" Margin="10" WidthRequest="125" HeightRequest="110" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Image Aspect="AspectFill" Source="{Binding Image}" Margin="10" WidthRequest="125" HeightRequest="125" HorizontalOptions="Center" VerticalOptions="Center"/>
                         <Label Grid.Row="1" Text="{Binding Name}" TextColor="Black" FontFamily="ThemeFont" VerticalOptions="End" HorizontalOptions="Start"/>
                         <Label Grid.Row="2" Text="{Binding Description}" TextColor="Gray" FontFamily="ThemeFont" VerticalOptions="End"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </Grid>
+        </Grid>
+        </ScrollView>
+        </pancake:PancakeView>
     </StackLayout>
 </ContentPage>
