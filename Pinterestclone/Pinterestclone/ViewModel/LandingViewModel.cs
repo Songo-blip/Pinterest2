@@ -48,8 +48,8 @@ namespace Pinterestclone.ViewModel
                 var viewModel = new DetailsViewModel { SelectedAdvert = selectedAdvert, Adverts = adverts, Position = adverts.IndexOf(selectedAdvert) };
                 var detailsPage = new DetailsPage { BindingContext = viewModel };
 
-                var navigation = Application.Current.MainPage as NavigationPage;
-                navigation.PushAsync(detailsPage, true);
+             var navigation = Application.Current.MainPage as NavigationPage;
+              navigation.PushAsync(detailsPage, true);
             }
         }
          private ObservableCollection<Advert> GetAdverts()
